@@ -15,6 +15,11 @@ pipeline {
                     // 調用 Shared Library 中的方法
                     // mySharedFunction()
                     echo "${FOLDER_NAME}"
+                    sh """
+                        midir ${FOLDER_NAME}
+                        cd ${FOLDER_NAME}
+                        echo pwd
+                    """
                     // echo "This is ${FOLDER_NAME}"
                     // sh 'printenv'
                 }
