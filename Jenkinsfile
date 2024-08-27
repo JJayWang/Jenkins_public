@@ -10,5 +10,12 @@ pipeline {
                 }
             }
         }
+        stage('Build 2') {
+            steps {
+                script {
+                    echo "jenkins from github"
+                }
+            }
+        }
     }
 }
