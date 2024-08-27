@@ -1,4 +1,6 @@
-@Library('sharedlibrary.jjay.deployment@main') _
+// @Library('sharedlibrary.jjay.deployment@main') _
+library 'sharedlibrary.jjay.deployment@main'
+
 pipeline {
     agent any
     stages {
