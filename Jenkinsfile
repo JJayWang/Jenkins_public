@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     FileInnerFunction()
-                    pwd
+                    sh """ pwd """
                 }
             }
         }
