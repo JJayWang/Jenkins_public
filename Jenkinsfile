@@ -18,10 +18,10 @@ pipeline {
                     echo "jenkins from github"
                     parallel (
                         "p1": {
-                            sh "this is p1"
+                            sh "echo this is p1"
                         },
                         "p2": {
-                            sh "this is p2"
+                            sh "echo this is p2"
                         }
                     );
                 }
