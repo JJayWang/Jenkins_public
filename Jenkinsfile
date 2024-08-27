@@ -14,35 +14,35 @@ pipeline {
                 script {
                     // 調用 Shared Library 中的方法
                     // mySharedFunction()
-                    // echo $FOLDER_NAME
+                    echo ${env.FOLDER_NAME}
                     // echo "This is ${FOLDER_NAME}"
-                    sh 'printenv'
+                    // sh 'printenv'
                 }
             }
         }
-        stage('Build 2') {
-            steps {
-                script {
-                    echo "jenkins from github"
-                    parallel (
-                        "p1": {
-                            sh "echo this is p1"
-                        },
-                        "p2": {
-                            sh "echo this is p2"
-                        }
-                    );
-                }
-            }
-        }
-        stage('Call Inner Function') {
-            steps {
-                script {
-                    FileInnerFunction()
-                    sh """ pwd """
-                }
-            }
-        }
+        // stage('Build 2') {
+        //     steps {
+        //         script {
+        //             echo "jenkins from github"
+        //             parallel (
+        //                 "p1": {
+        //                     sh "echo this is p1"
+        //                 },
+        //                 "p2": {
+        //                     sh "echo this is p2"
+        //                 }
+        //             );
+        //         }
+        //     }
+        // }
+        // stage('Call Inner Function') {
+        //     steps {
+        //         script {
+        //             FileInnerFunction()
+        //             sh """ pwd """
+        //         }
+        //     }
+        // }
     }
 }
 
