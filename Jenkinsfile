@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // 調用 Shared Library 中的方法
                     // mySharedFunction()
-                    echo ${FOLDER_NAME}
+                    // echo ${FOLDER_NAME}
                     echo "This is ${FOLDER_NAME}"
                 }
             }
