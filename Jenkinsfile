@@ -16,7 +16,7 @@ pipeline {
                     // mySharedFunction()
                     echo "${FOLDER_NAME}"
                     sh """
-                        midir ${FOLDER_NAME}
+                        mkdir ${FOLDER_NAME}
                         cd ${FOLDER_NAME}
                         echo pwd
                     """
