@@ -18,7 +18,7 @@ pipeline {
                     sh """
                         mkdir ${FOLDER_NAME}
                         cd ${FOLDER_NAME}
-                        echo pwd
+                        pwd
                     """
                     // echo "This is ${FOLDER_NAME}"
                     // sh 'printenv'
