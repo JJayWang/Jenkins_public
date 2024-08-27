@@ -17,5 +17,16 @@ pipeline {
                 }
             }
         }
+        stage('Call Inner Function') {
+            steps {
+                script {
+                    FileInnerFunction()
+                }
+            }
+        }
     }
+}
+
+def FileInnerFunction() {
+    echo "this is inner function!"
 }
