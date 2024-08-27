@@ -3,12 +3,19 @@ library 'sharedlibrary.jjay.deployment@main'
 
 pipeline {
     agent any
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+        FOLDER_NAME  = 'JJFolder'
+    }
     stages {
         stage('Build') {
             steps {
                 script {
                     // 調用 Shared Library 中的方法
-                    mySharedFunction()
+                    // mySharedFunction()
+                    echo ${FOLDER_NAME}
+                    echo "This is ${FOLDER_NAME}"
                 }
             }
         }
