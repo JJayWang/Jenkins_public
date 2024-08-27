@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // 調用 Shared Library 中的方法
                     // mySharedFunction()
-                    echo ${env.FOLDER_NAME}
+                    echo "${env.FOLDER_NAME}"
                     // echo "This is ${FOLDER_NAME}"
                     // sh 'printenv'
                 }
