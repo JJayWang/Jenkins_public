@@ -16,6 +16,14 @@ pipeline {
             steps {
                 script {
                     echo "jenkins from github"
+                    parallel (
+                        "p1": {
+                            sh "this is p1"
+                        },
+                        "p2": {
+                            sh "this is p2"
+                        }
+                    );
                 }
             }
         }
